@@ -16,12 +16,14 @@ In this course we will learn the basics of how biology and computers interact.
 
 |Time|Topic|Lesson|More Resources|
 |:---|:----|:-----|:-------------|
-||||
-||||
-||||
-||||
-||||
-||||
+|09:15|Welcome and Intro||
+|09:45|Intro to Linux||
+|10:00|Logging onto the Cloud|[lesson](https://jasonjwilliamsny.github.io/biocoding-2016/lessons/cloud_lesson/)|
+|10:30|Break||
+|10:45|The Unix Filesystem||
+|12:00|Lunch||
+|01:00|DNA Barcoding Experiment||
+|03:30|Linux Wrap-up|||
 
 
 ### Tuesday
