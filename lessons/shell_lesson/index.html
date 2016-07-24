@@ -1,0 +1,520 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style media="all">/************** BASE CSS **************/
+html, body { margin: 0; padding: 0; }
+body { margin: 0 auto 2rem; padding: 0 2.5rem; max-width: 600px; font-family: Helvetica Neue; font-size: 9.0pt; font-weight: 400; }
+
+h1 { margin-bottom: 0.6rem; font-size: 2rem; }
+h2 { margin: 1.5rem 0 1rem; font-size: 1.5rem; }
+h3 { margin: 1.3rem 0 1rem; font-size: 1.2rem; }
+h4, h5, h6 { font-size: 1rem; }
+
+hr { margin: 2em 0; border: none; height: 3px; }
+
+img { max-width: 100%; }
+p { padding-top: 0.3rem; line-height: 1.5rem; font-size: 0.9rem; }
+
+.img-sandbox-error { padding: 20px 10px; border: solid 1px #ddd; }
+    .img-sandbox-error h2 { margin: 0; text-align: center; font-size: 16px; }
+    .img-sandbox-error p { margin: 0; padding-top: 15px; text-align: center; font-size: 12px; }
+
+table { width: 100%; border-collapse: collapse; border-spacing: 0; }
+    thead th { text-align: left; }
+        thead th[align="center"] { text-align: center; }
+        thead th[align="right"] { text-align: right; }
+    tr { margin: 0; padding: 0; }
+    th, td { margin: 0; padding: .75rem; }
+
+ul, ol { margin: 0; padding: 0 0 0 3rem; }
+  ul ul, ol ol { padding: 0.5rem 0 0.5rem 2rem; }
+ul { list-style-type: disc; }
+  li { padding: 0.15rem 0; font-size: 0.9rem; line-height: 1.4rem; }
+    .checkitem { position: relative; list-style: none; }
+    li p:first-child { margin: 0; padding: 0; }
+
+.checkitem input[type=checkbox] { -webkit-appearance: button; position: absolute; top: 4epx; left: -22px; width: 0.8rem; height: 0.8rem; border: solid 1px #000; border-radius: 2px; }
+
+code { padding: 0 3px; }
+pre { padding-top: 0.3rem; }
+pre code { display: block; padding: 7px; overflow: auto; line-height: 1.4rem; }
+
+blockquote { margin: 1rem 0 1rem 2rem; padding: 0 1rem; }
+    blockquote p { margin: 0; padding-bottom: 1rem; }
+    blockquote p:last-child { padding-bottom: 0.3rem; }
+
+.footnotes { font-size: .9rem; }
+sup a { padding-left: 1px; }
+    .footnotes a, sup a { text-decoration: none; }
+
+.erato-range, .erato-range a { display: inline; margin: 0 !important; padding: 0 !important; width: 0; height: 0; }
+
+/* -----------------------------------------------------------------------------
+   github.com style (c) Vasily Polovnyov <vast@whiteants.net>
+----------------------------------------------------------------------------- */
+
+.hljs {
+  display: block; padding: 0.5rem;
+  color: #333;
+}
+
+.hljs-comment,
+.hljs-template_comment,
+.diff .hljs-header,
+.hljs-javadoc {
+  color: #998;
+  font-style: italic
+}
+
+.hljs-keyword,
+.css .rule .hljs-keyword,
+.hljs-winutils,
+.javascript .hljs-title,
+.nginx .hljs-title,
+.hljs-subst,
+.hljs-request,
+.hljs-status {
+  color: #333;
+  font-weight: bold
+}
+
+.hljs-number,
+.hljs-hexcolor,
+.ruby .hljs-constant {
+  color: #099;
+}
+
+.hljs-string,
+.hljs-tag .hljs-value,
+.hljs-phpdoc,
+.tex .hljs-formula {
+  color: #d14
+}
+
+.hljs-title,
+.hljs-id,
+.coffeescript .hljs-params,
+.scss .hljs-preprocessor {
+  color: #900;
+  font-weight: bold
+}
+
+.javascript .hljs-title,
+.lisp .hljs-title,
+.clojure .hljs-title,
+.hljs-subst {
+  font-weight: normal
+}
+
+.hljs-class .hljs-title,
+.haskell .hljs-type,
+.vhdl .hljs-literal,
+.tex .hljs-command {
+  color: #458;
+  font-weight: bold
+}
+
+.hljs-tag,
+.hljs-tag .hljs-title,
+.hljs-rules .hljs-property,
+.django .hljs-tag .hljs-keyword {
+  color: #000080;
+  font-weight: normal
+}
+
+.hljs-attribute,
+.hljs-variable,
+.lisp .hljs-body {
+  color: #008080
+}
+
+.hljs-regexp {
+  color: #009926
+}
+
+.hljs-symbol,
+.ruby .hljs-symbol .hljs-string,
+.lisp .hljs-keyword,
+.tex .hljs-special,
+.hljs-prompt {
+  color: #990073
+}
+
+.hljs-built_in,
+.lisp .hljs-title,
+.clojure .hljs-built_in {
+  color: #0086b3
+}
+
+.hljs-preprocessor,
+.hljs-pragma,
+.hljs-pi,
+.hljs-doctype,
+.hljs-shebang,
+.hljs-cdata {
+  color: #999;
+  font-weight: bold
+}
+
+.hljs-deletion {
+  background: #fdd
+}
+
+.hljs-addition {
+  background: #dfd
+}
+
+.diff .hljs-change {
+  background: #0086b3
+}
+
+.hljs-chunk {
+  color: #aaa
+}
+
+/************** ERATO LIGHT CSS **************/
+body { color: #333; }
+
+hr { background: #eee; }
+a { color: #0060ff; }
+    a:hover { color: #0843a3; }
+
+thead th { background: #f8f8f8; }
+th, td { border: solid 1px #eee; }
+
+.checkitem input[type=checkbox] { border: solid 1px #ddd; background-color: #fff; }
+    .checkitem input[type=checkbox]:checked { background-color: #eee; }
+
+code { background: #f5f5f4; }
+blockquote { border-left: solid 6px #eee; }
+
+.footnotes { color: #999; }</style><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script></head><body><h2>Learning Objectives</h2>
+
+<div class="erato-range"><a data-range="25,279" name="25,279"></a></div><ul>
+<li>Know what the &#39;shell&#39; is and how to use the shell to navigate the file system and execute commands<br></li>
+<li>Understand principles and strategies for working at the command line. <br></li>
+<li>Understand how the shell makes computing more reproducible and more powerful<br></li>
+</ul>
+
+<div class="erato-range"><a data-range="279,311" name="279,311"></a></div><h2>Lesson - What is the Shell?</h2>
+
+<div class="erato-range"><a data-range="311,548" name="311,548"></a></div><p>The <em>shell</em> is a program that presents a command line interface which allows you to control your computer using commands entered with a keyboard instead of controlling graphical user interfaces (GUIs) with a mouse/keyboard combination.</p>
+
+<div class="erato-range"><a data-range="548,598" name="548,598"></a></div><p>There are many reasons to learn about the shell.</p>
+
+<div class="erato-range"><a data-range="598,1058" name="598,1058"></a></div><ul>
+<li>For most bioinformatics tools, you have to use the shell. There is no graphical interface. If you want to work in genomics you&#39;re going to need to use the shell.<br></li>
+<li>The shell gives you <em>power</em>. The command line gives you the power to do your work more efficiently and more quickly.  When you need to do things tens to hundreds of times, knowing how to use the shell is transformative.<br></li>
+<li>To use remote computers or cloud computing, you need to use the shell.<br></li>
+</ul>
+
+<div class="erato-range"><a data-range="1058,1090" name="1058,1090"></a></div><p><img src="./img/gvng.jpg" alt="Automation"></p>
+
+<div class="erato-range"><a data-range="1090,1166" name="1090,1166"></a></div><p>Unix is user-friendly, it&#39;s just very selective about who its friends are.</p>
+
+<div class="erato-range"><a data-range="1166,1263" name="1166,1263"></a></div><p>Today we&#39;re going to go through how to access Unix/Linux and some of the basic shell commands.</p>
+
+<div class="erato-range"><a data-range="1263,1291" name="1263,1291"></a></div><h2>Starting with the shell</h2>
+
+<div class="erato-range"><a data-range="1291,1402" name="1291,1402"></a></div><p>We will spend most of our time learning about the basics of the shell by manipulating some experimental data.</p>
+
+<div class="erato-range"><a data-range="1402,1542" name="1402,1542"></a></div><p>Now we&#39;re going to download the data for the tutorial. For this you&#39;ll need internet access, because you&#39;re going to get it off the web.  </p>
+
+<div class="erato-range"><a data-range="1542,1653" name="1542,1653"></a></div><p>We&#39;re going to be working with data on our remote server. After logging on, we&#39;ll check out the example data.</p>
+
+<div class="erato-range"><a data-range="1653,1695" name="1653,1695"></a></div><p>Let&#39;s go into the sample data  directory</p>
+
+<div class="erato-range"><a data-range="1695,1728" name="1695,1728"></a></div><pre><code class="bash">$ cd dc_sample data
+</code></pre>
+
+<div class="erato-range"><a data-range="1728,1764" name="1728,1764"></a></div><p>&#39;cd&#39; stands for &#39;change directory&#39;</p>
+
+<div class="erato-range"><a data-range="1764,1797" name="1764,1797"></a></div><p>Let&#39;s see what is in here. Type</p>
+
+<div class="erato-range"><a data-range="1797,1815" name="1797,1815"></a></div><pre><code class="bash">$ ls
+</code></pre>
+
+<div class="erato-range"><a data-range="1815,1875" name="1815,1875"></a></div><p>You will see</p>
+
+<pre><code class="bash">    sra_metadata  untrimmed_fastq
+</code></pre>
+
+<div class="erato-range"><a data-range="1875,1939" name="1875,1939"></a></div><p>ls stands for &#39;list&#39; and it lists the contents of a directory.</p>
+
+<div class="erato-range"><a data-range="1939,2054" name="1939,2054"></a></div><p>There are two items listed.  What are they? We can use a command line argument with <code>ls</code> to get more information.</p>
+
+<div class="erato-range"><a data-range="2054,2107" name="2054,2107"></a></div><pre><code class="bash">$ ls -F
+sra_metadata/  untrimmed_fastq/
+</code></pre>
+
+<div class="erato-range"><a data-range="2107,2239" name="2107,2239"></a></div><p>Anything with a &quot;/&quot; after it is a directory. Things with a &quot;*&quot; after them are programs.  If there are no decorations, it&#39;s a file.</p>
+
+<div class="erato-range"><a data-range="2239,2269" name="2239,2269"></a></div><p>You can also use the command</p>
+
+<div class="erato-range"><a data-range="2269,2405" name="2269,2405"></a></div><pre><code class="bash">$ ls -l
+drwxr-x--- 2 dcuser sudo 4096 Jul 30 11:37 sra_metadata
+drwxr-xr-x 2 dcuser sudo 4096 Jul 30 11:38 untrimmed_fastq
+</code></pre>
+
+<div class="erato-range"><a data-range="2405,2510" name="2405,2510"></a></div><p>to see whether items in a directory are files or directories. <code>ls -l</code> gives a lot more<br>
+information too.</p>
+
+<div class="erato-range"><a data-range="2510,2581" name="2510,2581"></a></div><p>Let&#39;s go into the untrimmed_fastq directory and see what is in there.</p>
+
+<div class="erato-range"><a data-range="2581,2656" name="2581,2656"></a></div><pre><code class="bash">$ cd untrimmed_fastq
+$ ls -F
+SRR097977.fastq  SRR098026.fastq
+</code></pre>
+
+<div class="erato-range"><a data-range="2656,2738" name="2656,2738"></a></div><p>There are two items in this directory with no trailing slash, so they are files.</p>
+
+<div class="erato-range"><a data-range="2738,2753" name="2738,2753"></a></div><h2>Arguments</h2>
+
+<div class="erato-range"><a data-range="2753,3079" name="2753,3079"></a></div><p>Most programs take additional arguments that control their exact behavior. For example, <code>-F</code> and <code>-l</code> are arguments to <code>ls</code>.  The <code>ls</code> program, like many programs, take a lot of arguments. Another useful one is &#39;-a&#39;, which show everything, including hidden files.  How do we know what the options are to particular commands?</p>
+
+<div class="erato-range"><a data-range="3079,3194" name="3079,3194"></a></div><p>Most commonly used shell programs have a manual. You can access the<br>
+manual using the <code>man</code> program. Try entering:</p>
+
+<div class="erato-range"><a data-range="3194,3216" name="3194,3216"></a></div><pre><code class="bash">$ man ls
+</code></pre>
+
+<div class="erato-range"><a data-range="3216,3362" name="3216,3362"></a></div><p>This will open the manual page for <code>ls</code>. Use the space key to go forward and b to go backwards. When you are done reading, just hit <code>q</code> to quit.</p>
+
+<div class="erato-range"><a data-range="3362,3640" name="3362,3640"></a></div><p>Programs that are run from the shell can get extremely complicated. To see an example, open up the manual page for the <code>find</code> program. No one can possibly learn all of these arguments, of course. So you will probably find yourself referring back to the manual page frequently.</p>
+
+<div class="erato-range"><a data-range="3640,3700" name="3640,3700"></a></div><h2>The Unix directory file structure (a.k.a. where am I?)</h2>
+
+<div class="erato-range"><a data-range="3700,3889" name="3700,3889"></a></div><p>As you&#39;ve already just seen, you can move around in different directories or folders at the command line. Why would you want to do this, rather than just navigating around the normal way.</p>
+
+<div class="erato-range"><a data-range="3889,4227" name="3889,4227"></a></div><p>When you&#39;re working with bioinformatics programs, you&#39;re working with your data and it&#39;s key to be able to have that data in the right place and make sure the program has access to the data. Many of the problems people run in to with command line bioinformatics programs is not having the data in the place the program expects it to be.</p>
+
+<div class="erato-range"><a data-range="4227,4262" name="4227,4262"></a></div><h2>Moving around the file system</h2>
+
+<div class="erato-range"><a data-range="4262,4299" name="4262,4299"></a></div><p>Let&#39;s practice moving around a bit.</p>
+
+<div class="erato-range"><a data-range="4299,4356" name="4299,4356"></a></div><p>We&#39;re going to work in that <code>dc_sample_data</code> directory.</p>
+
+<div class="erato-range"><a data-range="4356,4463" name="4356,4463"></a></div><p>First we did something like go to the folder of our username. Then we opened<br>
+&#39;dc_sample_data&#39; then &#39;data&#39;</p>
+
+<div class="erato-range"><a data-range="4463,4494" name="4463,4494"></a></div><p>Let&#39;s draw out how that went.</p>
+
+<div class="erato-range"><a data-range="4494,4572" name="4494,4572"></a></div><p>Now let&#39;s draw some of the other files and folders we could have clicked on.</p>
+
+<div class="erato-range"><a data-range="4572,4699" name="4572,4699"></a></div><p>This is called a hierarchical file system structure, like an upside down tree<br>
+with root (/) at the base that looks like this.</p>
+
+<div class="erato-range"><a data-range="4699,4727" name="4699,4727"></a></div><p><img src="./img/Slide1.jpg" alt="Unix"></p>
+
+<div class="erato-range"><a data-range="4727,4787" name="4727,4787"></a></div><p>That (/) at the base is often also called the &#39;top&#39; level.</p>
+
+<div class="erato-range"><a data-range="4787,4938" name="4787,4938"></a></div><p>When you are working at your computer or log in to a remote computer,<br>
+you are on one of the branches of that tree, your home directory (/home/dcuser)</p>
+
+<div class="erato-range"><a data-range="4938,4997" name="4938,4997"></a></div><p>Now let&#39;s go do that same navigation at the command line.</p>
+
+<div class="erato-range"><a data-range="4997,5003" name="4997,5003"></a></div><p>Type</p>
+
+<div class="erato-range"><a data-range="5003,5021" name="5003,5021"></a></div><pre><code class="bash">$ cd
+</code></pre>
+
+<div class="erato-range"><a data-range="5021,5078" name="5021,5078"></a></div><p>This puts you in your home directory. This folder here.</p>
+
+<div class="erato-range"><a data-range="5078,5167" name="5078,5167"></a></div><p>Now using <code>cd</code> and <code>ls</code>, go in to the &#39;dc_sample_data&#39; directory and list its contents.</p>
+
+<div class="erato-range"><a data-range="5167,5318" name="5167,5318"></a></div><p>Let&#39;s also check to see where we are. Sometimes when we&#39;re wandering around in the file system, it&#39;s easy to lose track of where we are and get lost.</p>
+
+<div class="erato-range"><a data-range="5318,5380" name="5318,5380"></a></div><p>If you want to know what directory you&#39;re currently in, type</p>
+
+<div class="erato-range"><a data-range="5380,5485" name="5380,5485"></a></div><pre><code class="bash">$ pwd
+</code></pre>
+
+<p>This stands for &#39;print working directory&#39;. The directory you&#39;re currently working in.</p>
+
+<div class="erato-range"><a data-range="5485,5618" name="5485,5618"></a></div><p>What if we want to move back up and out of the &#39;data&#39; directory? Can we just type <code>cd dc_sample_data</code>? Try it and see what happens.</p>
+
+<div class="erato-range"><a data-range="5618,5663" name="5618,5663"></a></div><p>To go &#39;back up a level&#39; we need to use <code>..</code></p>
+
+<div class="erato-range"><a data-range="5663,5669" name="5663,5669"></a></div><p>Type</p>
+
+<div class="erato-range"><a data-range="5669,5690" name="5669,5690"></a></div><pre><code class="bash">$ cd ..
+</code></pre>
+
+<div class="erato-range"><a data-range="5690,5812" name="5690,5812"></a></div><p>Now do <code>ls</code> and <code>pwd</code>. See now that we went back up in to the &#39;dc_sample_data&#39;<br>
+directory. <code>..</code> means go back up a level.</p>
+
+<div class="erato-range"><a data-range="5812,5834" name="5812,5834"></a></div><hr>
+
+<p><strong>Exercise</strong></p>
+
+<div class="erato-range"><a data-range="5834,5991" name="5834,5991"></a></div><p>Now we&#39;re going to try a hunt.  Find a hidden directory in dc_sample_data list its contents and file the text file in there.  What is the name of the file?</p>
+
+<div class="erato-range"><a data-range="5991,6088" name="5991,6088"></a></div><p>Hint: hidden files and folders in unix start with &#39;.&#39;, for example .my_hidden_directory</p>
+
+<hr>
+
+<div class="erato-range"><a data-range="6088,6137" name="6088,6137"></a></div><h2>Examining the contents of other directories</h2>
+
+<div class="erato-range"><a data-range="6137,6448" name="6137,6448"></a></div><p>By default, the <code>ls</code> commands lists the contents of the working directory (i.e. the directory you are in). You can always find the directory you are in using the <code>pwd</code> command. However, you can also give <code>ls</code> the names of other directories to view. Navigate to the home directory if you are not already there.</p>
+
+<div class="erato-range"><a data-range="6448,6455" name="6448,6455"></a></div><p>Type:</p>
+
+<div class="erato-range"><a data-range="6455,6497" name="6455,6497"></a></div><pre><code class="bash">$ cd
+</code></pre>
+
+<p>Then enter the command:</p>
+
+<div class="erato-range"><a data-range="6497,6530" name="6497,6530"></a></div><pre><code class="bash">$ ls dc_sample_data
+</code></pre>
+
+<div class="erato-range"><a data-range="6530,6631" name="6530,6631"></a></div><p>This will list the contents of the <code>dc_sample_data</code> directory without you having to navigate there.</p>
+
+<div class="erato-range"><a data-range="6631,6687" name="6631,6687"></a></div><p>The <code>cd</code> command works in a similar way. Try entering:</p>
+
+<div class="erato-range"><a data-range="6687,6736" name="6687,6736"></a></div><pre><code class="bash">$ cd dc_sample_data/untrimmed_fastq
+</code></pre>
+
+<div class="erato-range"><a data-range="6736,6842" name="6736,6842"></a></div><p>and you will jump directly to <code>untrimmed_fastq</code> without having to go through the intermediate directory.</p>
+
+<div class="erato-range"><a data-range="6842,6862" name="6842,6862"></a></div><hr>
+
+<p><strong>Exercise</strong></p>
+
+<div class="erato-range"><a data-range="6862,6954" name="6862,6954"></a></div><p>List the &#39;SRR097977.fastq&#39; file from your home directory without changing directories</p>
+
+<hr>
+
+<div class="erato-range"><a data-range="6954,6984" name="6954,6984"></a></div><h3>Shortcut: Tab Completion</h3>
+
+<div class="erato-range"><a data-range="6984,7274" name="6984,7274"></a></div><p>Navigate to the home directory. Typing out directory names can waste a lot of time. When you start typing out the name of a directory, then hit the tab key, the shell will try to fill in the rest of the directory name. For example, type <code>cd</code> to get back to your home directly, then enter:</p>
+
+<div class="erato-range"><a data-range="7274,7301" name="7274,7301"></a></div><pre><code class="bash">$ cd dc_&lt;tab&gt;
+</code></pre>
+
+<div class="erato-range"><a data-range="7301,7419" name="7301,7419"></a></div><p>The shell will fill in the rest of the directory name for <code>dc_sample_data</code>. Now go to dc_sample_data/untrimmed_fastq</p>
+
+<div class="erato-range"><a data-range="7419,7450" name="7419,7450"></a></div><pre><code class="bash">$ ls SR&lt;tab&gt;&lt;tab&gt;
+</code></pre>
+
+<div class="erato-range"><a data-range="7450,7709" name="7450,7709"></a></div><p>When you hit the first tab, nothing happens. The reason is that there are multiple directories in the home directory which start with <code>SR</code>. Thus, the shell does not know which one to fill in. When you hit tab again, the shell will list the possible choices.</p>
+
+<div class="erato-range"><a data-range="7709,7950" name="7709,7950"></a></div><p>Tab completion can also fill in the names of programs. For example, enter <code>e&lt;tab&gt;&lt;tab&gt;</code>. You will see the name of every program that starts with an <code>e</code>. One of those is <code>echo</code>. If you enter <code>ec&lt;tab&gt;</code> you will see that tab completion works.</p>
+
+<div class="erato-range"><a data-range="7950,7952" name="7950,7952"></a></div><div class="erato-range"><a data-range="7952,7980" name="7952,7980"></a></div><h2>Full vs. Relative Paths</h2>
+
+<div class="erato-range"><a data-range="7980,8331" name="7980,8331"></a></div><p>The <code>cd</code> command takes an argument which is the directory name. Directories can be specified using either a <em>relative</em> path or a full <em>path</em>. The directories on the computer are arranged into a hierarchy. The full path tells you where a directory is in that hierarchy. Navigate to the home directory. Now, enter the <code>pwd</code> command and you should see:</p>
+
+<div class="erato-range"><a data-range="8331,8363" name="8331,8363"></a></div><pre><code class="bash">$ pwd
+/home/dcuser
+</code></pre>
+
+<div class="erato-range"><a data-range="8363,8765" name="8363,8765"></a></div><p>which is the full name of your home directory. This tells you that you are in a directory called <code>dcuser</code>, which sits inside a directory called <code>home</code> which sits inside the very top directory in the hierarchy. The very top of the hierarchy is a directory called <code>/</code> which is usually referred to as the <em>root directory</em>. So, to summarize: <code>dcuser</code> is a directory in <code>home</code> which is a directory in <code>/</code>.</p>
+
+<div class="erato-range"><a data-range="8765,8799" name="8765,8799"></a></div><p>Now enter the following command:</p>
+
+<div class="erato-range"><a data-range="8799,8853" name="8799,8853"></a></div><pre><code class="bash">$ cd /home/dcuser/dc_sample_data/.hidden
+</code></pre>
+
+<div class="erato-range"><a data-range="8853,8952" name="8853,8952"></a></div><p>This jumps to <code>.hidden</code>. Now go back to the home directory (cd). We saw<br>
+earlier that the command:</p>
+
+<div class="erato-range"><a data-range="8952,8993" name="8952,8993"></a></div><pre><code class="bash">$ cd dc_sample_data/.hidden
+</code></pre>
+
+<div class="erato-range"><a data-range="8993,9302" name="8993,9302"></a></div><p>had the same effect - it took us to the <code>hidden</code> directory. But, instead of specifying the full path (<code>/home/dcuser/dc_sample_data/data</code>), we specified a <em>relative path</em>. In other words, we specified the path relative to our current directory. A full path always starts with a <code>/</code>. A relative path does not.</p>
+
+<div class="erato-range"><a data-range="9302,9707" name="9302,9707"></a></div><p>A relative path is like getting directions from someone on the street. They tell you to &quot;go right at the Stop sign, and then turn left on Main Street&quot;. That works great if you&#39;re standing there together, but not so well if you&#39;re trying to tell someone how to get there from another country. A full path is like GPS coordinates. It tells you exactly where something is no matter where you are right now.</p>
+
+<div class="erato-range"><a data-range="9707,9922" name="9707,9922"></a></div><p>You can usually use either a full path or a relative path depending on what is most convenient. If we are in the home directory, it is more convenient to just enter the relative path since it involves less typing.</p>
+
+<div class="erato-range"><a data-range="9922,10083" name="9922,10083"></a></div><p>Over time, it will become easier for you to keep a mental note of the structure of the directories that you are using and how to quickly navigate amongst them.</p>
+
+<div class="erato-range"><a data-range="10083,10252" name="10083,10252"></a></div><hr>
+
+<p><strong>Exercise</strong><br>
+Now, list the contents of the /bin directory. Do you see anything familiar in there? <br>
+How can you tell these are programs rather than plain files?</p>
+
+<hr>
+
+<div class="erato-range"><a data-range="10252,10315" name="10252,10315"></a></div><h2>Saving time with shortcuts, wild cards, and tab completion</h2>
+
+<div class="erato-range"><a data-range="10315,10330" name="10315,10330"></a></div><h3>Shortcuts</h3>
+
+<div class="erato-range"><a data-range="10330,10559" name="10330,10559"></a></div><p>There are some shortcuts which you should know about. Dealing with the<br>
+home directory is very common. So, in the shell the tilde character,<br>
+&quot;~&quot;, is a shortcut for your home directory. Navigate to the <code>dc_sample_data</code><br>
+directory:</p>
+
+<div class="erato-range"><a data-range="10559,10597" name="10559,10597"></a></div><pre><code class="bash">$ cd
+$ cd dc_sample_data
+</code></pre>
+
+<div class="erato-range"><a data-range="10597,10622" name="10597,10622"></a></div><p>Then enter the command:</p>
+
+<div class="erato-range"><a data-range="10622,10642" name="10622,10642"></a></div><pre><code class="bash">$ ls ~
+</code></pre>
+
+<div class="erato-range"><a data-range="10642,10819" name="10642,10819"></a></div><p>This prints the contents of your home directory, without you having to type the full path. The shortcut <code>..</code> always refers to the directory above your current directory. Thus:</p>
+
+<div class="erato-range"><a data-range="10819,10840" name="10819,10840"></a></div><pre><code class="bash">$ ls ..
+</code></pre>
+
+<div class="erato-range"><a data-range="10840,10933" name="10840,10933"></a></div><p>prints the contents of the <code>/home/dcuser/dc_sample_data</code>. You can chain these together, so:</p>
+
+<div class="erato-range"><a data-range="10933,10958" name="10933,10958"></a></div><pre><code class="bash">$ ls ../../
+</code></pre>
+
+<div class="erato-range"><a data-range="10958,11313" name="10958,11313"></a></div><p>prints the contents of <code>/home/dcuser</code> which is your home directory. Finally, the special directory <code>.</code> always refers to your current directory. So, <code>ls</code>, <code>ls .</code>, and <code>ls ././././.</code> all do the same thing, they print the contents of the current directory. This may seem like a useless shortcut right now, but we&#39;ll see when it is needed in a little while.</p>
+
+<div class="erato-range"><a data-range="11313,11540" name="11313,11540"></a></div><p>To summarize, while you are in the <code>shell</code> directory, the commands <code>ls ~</code>, <code>ls ~/.</code>, <code>ls ../../</code>, and <code>ls /home/dcuser</code> all do exactly the same thing. These shortcuts are not necessary, they are provided for your convenience.</p>
+
+<div class="erato-range"><a data-range="11540,11571" name="11540,11571"></a></div><h3>Our data set: FASTQ files</h3>
+
+<div class="erato-range"><a data-range="11571,11705" name="11571,11705"></a></div><p>We did an experiment and want to look at sequencing results. We want to be able to look at these files and do some things with them.</p>
+
+<div class="erato-range"><a data-range="11705,11722" name="11705,11722"></a></div><h3>Wild cards</h3>
+
+<div class="erato-range"><a data-range="11722,11831" name="11722,11831"></a></div><p>Navigate to the <code>~/dc_sample_data/data/untrimmed_fastq</code> directory. This<br>
+directory contains our FASTQ files.</p>
+
+<div class="erato-range"><a data-range="11831,11986" name="11831,11986"></a></div><p>The <code>*</code> character is a shortcut for &quot;everything&quot;. Thus, if you enter <code>ls *</code>, you will see all of the contents of a given directory. Now try this command:</p>
+
+<div class="erato-range"><a data-range="11986,12011" name="11986,12011"></a></div><pre><code class="bash">$ ls *fastq
+</code></pre>
+
+<div class="erato-range"><a data-range="12011,12074" name="12011,12074"></a></div><p>This lists every file that ends with a <code>fastq</code>. This command:</p>
+
+<div class="erato-range"><a data-range="12074,12106" name="12074,12106"></a></div><pre><code class="bash">$ ls /usr/bin/*.sh
+</code></pre>
+
+<div class="erato-range"><a data-range="12106,12173" name="12106,12173"></a></div><p>Lists every file in <code>/usr/bin</code> that ends in the characters <code>.sh</code>.</p>
+
+<div class="erato-range"><a data-range="12173,12202" name="12173,12202"></a></div><pre><code class="bash">$ ls *977.fastq
+</code></pre>
+
+<div class="erato-range"><a data-range="12202,12250" name="12202,12250"></a></div><p>lists only the file that ends with &#39;977.fastq&#39;</p>
+
+<div class="erato-range"><a data-range="12250,12425" name="12250,12425"></a></div><p>So how does this actually work? Well...when the shell (bash) sees a word that contains the <code>*</code> character, it automatically looks for filenames that match the given pattern. </p>
+
+<div class="erato-range"><a data-range="12425,12510" name="12425,12510"></a></div><p>We can use the command &#39;echo&#39; to see wilcards are they are intepreted by the shell.</p>
+
+<div class="erato-range"><a data-range="12510,12570" name="12510,12570"></a></div><pre><code class="bash">$ echo *.fastq
+SRR097977.fastq SRR098026.fastq
+</code></pre>
+
+<div class="erato-range"><a data-range="12570,12635" name="12570,12635"></a></div><p>The &#39;*&#39; is expanded to include any file that ends with &#39;.fastq&#39;</p>
+
+<div class="erato-range"><a data-range="12635,12652" name="12635,12652"></a></div><h3>Resources:</h3>
+
+<div class="erato-range"><a data-range="12652,12975" name="12652,12975"></a></div><p>Shell cheat sheets:<br></p>
+
+<ul>
+<li><a href="http://fosswire.com/post/2007/08/unixlinux-command-cheat-sheet/">http://fosswire.com/post/2007/08/unixlinux-command-cheat-sheet/</a><br></li>
+<li><a href="https://github.com/swcarpentry/boot-camps/blob/master/shell/shell_cheatsheet.md">https://github.com/swcarpentry/boot-camps/blob/master/shell/shell_cheatsheet.md</a><br></li>
+</ul>
+
+<div class="erato-range"><a data-range="12975,13247" name="12975,13247"></a></div><ul>
+<li>Explain shell - a web site where you can see what the different components of a shell command are doing.<a href="http://explainshell.com">http://explainshell.com</a><br></li>
+<li>Learn more about cloud computing in bioinformatics <a href="http://www.commandlinefu.com">http://www.commandlinefu.com</a><br></li>
+</ul>
+
+<div class="erato-range"><a data-range="13247,13250" name="13247,13250"></a></div>
+<script>hljs.initHighlightingOnLoad();</script></body></html>
