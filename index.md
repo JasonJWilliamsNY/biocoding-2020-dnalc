@@ -2,7 +2,9 @@
 
 Welcome to BioCoding 2016. 
 
-In this course we will learn the basics of how biology and computers interact. 
+In this course we will learn the basics of how biology and computers interact.
+
+Ether pad Address: [http://pad.software-carpentry.org/2016-07-25-biocoding](http://pad.software-carpentry.org/2016-07-25-biocoding) 
 
 ## Agenda
 
@@ -18,7 +20,7 @@ In this course we will learn the basics of how biology and computers interact.
 |:---|:----|:-----|:-------------|
 |09:15|Welcome and Intro||
 |09:45|Intro to Linux||
-|10:00|Logging onto the Cloud|[lesson](https://jasonjwilliamsny.github.io/biocoding-2016/lessons/cloud_lesson/)|[PuTTY download](https://the.earth.li/~sgtatham/putty/latest/x86/putty.exe)
+|10:00|Logging onto the Cloud|[lesson](https://jasonjwilliamsny.github.io/biocoding-2016/lessons/cloud_lesson/)|<ul><li>[PuTTY download](https://the.earth.li/~sgtatham/putty/latest/x86/putty.exe)<li>[VNC Viewer download](https://www.realvnc.com/download/viewer/windows/)
 |10:30|Break|||
 |10:45|The Unix Filesystem|[lesson](https://jasonjwilliamsny.github.io/biocoding-2016/lessons/shell_lesson/)|
 |12:00|Lunch|||
