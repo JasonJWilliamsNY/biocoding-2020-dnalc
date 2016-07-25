@@ -4,7 +4,9 @@ Welcome to BioCoding 2016.
 
 In this course we will learn the basics of how biology and computers interact.
 
-Ether pad Address: [http://pad.software-carpentry.org/2016-07-25-biocoding](http://pad.software-carpentry.org/2016-07-25-biocoding) 
+Etherpad Address: [http://pad.software-carpentry.org/2016-07-25-biocoding](http://pad.software-carpentry.org/2016-07-25-biocoding) 
+
+Jupyter Hub Address: [https://balaur.cshl.edu:8380/hub/](https://balaur.cshl.edu:8380/hub/)
 
 ## Agenda
 
