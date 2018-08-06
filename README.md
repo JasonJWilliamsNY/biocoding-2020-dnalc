@@ -1,2 +1,2 @@
-# biocoding-2016
-Biocoding 2016 Summer Camp
+# biocoding-2018
+Biocoding 2018 Summer Camp
