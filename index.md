@@ -1,4 +1,4 @@
-#BioCoding
+# BioCoding
 
 Welcome to BioCoding.
 
@@ -13,7 +13,7 @@ Jupyter Hub Address: []()
 
 |Day|Topic|Lesson|More Resources|
 |:--|:----|:-----|:-------------|
-|Monday|<ul><li>Workshop Intro<li>Intro to Unix<li>DNA Barcoding experiment</ul>|||
+|Monday| - Workshop Intro - Intro to Unix - DNA Barcoding experiment |||
 |Tuesday|<ul></ul>|||
 |Wednesday|<ul></ul>|||
 |Thursday|<ul></ul>|||
