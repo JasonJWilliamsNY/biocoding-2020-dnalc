@@ -2,7 +2,7 @@ numpy == 1.15.1
 scipy == 1.1.0
 matplotlib == 2.2.3
 pandas == 0.23.4
-'plotnine[all]' == 0.4.0
+plotnine == 0.4.0
 jupyter_contrib_nbextensions == 0.5.0
 jupyter_nbextensions_configurator == 0.4.0
 ipywidgets == 7.4.0
