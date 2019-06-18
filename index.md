@@ -1,4 +1,8 @@
-# BioCoding
+# Biocoding 2019 Summer Camp
+![double helix logo](./img/Doublehelix.png)
+
+
+## Course schedule
 
 Welcome to BioCoding.
 
@@ -9,7 +13,6 @@ Etherpad Address: []()
 Jupyter Hub Address: []()
 
 ## Agenda
-
 
 |Day|Topic|Lesson|More Resources|
 |:--|:----|:-----|:-------------|
