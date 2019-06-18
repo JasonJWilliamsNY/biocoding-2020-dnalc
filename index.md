@@ -1,26 +1,68 @@
 
-# Course schedule
+# Welcome to BioCoding
 
-Welcome to BioCoding.
+BioCoding is an introductory course in bioinformatics and computer programing
+(coding) for students with little or no programming experience. Participants will
+learn the basics of working with Linux (Ubuntu), and are introduced to the Python
+scripting language. Skills learned will be used to complete simple bioinformatics
+projects that utilize DNA sequence data generated from a hands-on lab experiment.
 
-In this course we will learn the basics of how biology and computers interact.
+## Login info
 
-Etherpad Address: [TBA]()
+- Etherpad Address: [TBA]()
+- Jupyter Hub Address: [TBA]()
 
-Jupyter Hub Address: [TBA]()
+You will be informed of your usernames and passwords during the class.
 
-# Agenda
+## Agenda
 
-|Day|Topic|Notebooks|More Resources|
-|:--|:----|:--------|:-------------|
-|Monday|<ul><li>Introduction to the course <li>Introduction to Jupyter <li>Introduction to linux <li>Introduction to NCBI <li> What is a gene? <li> Browsing the human genome <li> Browsing OMIM for genes</ul>|<ul><li>Intro Python I</ul>||
-|Tuesday|<ul></ul>|||
-|Wednesday|<ul></ul>|||
-|Thursday|<ul></ul>|||
-|Friday|<ul></ul>|||
+<table data-source-line="1">
+<thead>
+<tr>
+<th style="text-align:left">Day</th>
+<th style="text-align:left">Topics</th>
+<th style="text-align:left">Notebooks/Activities</th>
+<th style="text-align:left">More Resources</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Monday</td>
+<td style="text-align:left"><ul><li>Introduction to the course</li><li>Introduction to Jupyter </li><li>Introduction to linux </li><li>Introduction to NCBI </li><li> What is a gene? </li><li> Browsing the human genome </li><li> Browsing OMIM for genes</li><li>Introduction to Python</li></ul></td>
+<td style="text-align:left"><ul><li>Intro Python I </li><li>Intro to Unix </li></ul></td>
+<td style="text-align:left"><ul><li><a href="https://www.ncbi.nlm.nih.gov/">NCBI</a></li><li><a href="https://www.ncbi.nlm.nih.gov/projects/genome/guide/human/index.shtml">Human genome</a></li><li><a href="https://www.genome.gov/">genome.gov</a></li><li><a href="http://www.dnai.org/">DNAi</a></li><li><a href="http://23andme.com/">23andMe</a></li><li><a href="https://www.omim.org/">OMIM</a></li></ul></td>
+</tr>
+<tr>
+<td style="text-align:left">Tuesday</td>
+<td style="text-align:left"><ul><li>Variables and strings</li><li>List, conditionals, loops</li></ul></td>
+<td style="text-align:left"><ul><li>Python lab II </li><li>Python lab III</li></ul></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">Wednesday</td>
+<td style="text-align:left"><ul><li>Dictionaries and functions</li><li>Objects and classes </li><li>Biomath and stats</li></ul></td>
+<td style="text-align:left"><ul><li>Python lab IV</li><li>Python Classes</li><li>Math review</li><li>Stats I,II,III</li></ul></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">Thursday</td>
+<td style="text-align:left"><ul><li>Working with files</li><li>Biopython</li></ul></td>
+<td style="text-align:left"><ul><li>Files</li><li>Biopython</li></ul></td>
+<td style="text-align:left"></td>
+</tr>
+</tbody>
+</table>
+
+## Learning more after the class
+
+**General Coding**
+
+- CodeCademy [link](https://www.codecademy.com/)
+- Hour of code (also in languages other than english) [link](https://code.org/learn)
 
 
-# Conduct expectations
+
+## Conduct expectations
 
 During this course all students are expected to conduct themselves in a way
 that is respectful of their fellow students and the learning environment.
