@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Learning Objectives | [“BioCoding 2019 - Toms River”]</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Learning Objectives" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/lessons/shell_lesson/" />
+<meta property="og:url" content="http://localhost:4000/lessons/shell_lesson/" />
+<meta property="og:site_name" content="[“BioCoding 2019 - Toms River”]" />
+<script type="application/ld+json">
+{"@type":"WebPage","url":"http://localhost:4000/lessons/shell_lesson/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/Doublehelix.png"}},"headline":"Learning Objectives","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=0960dc9bac4b74412bb1e249a0c28aeb2110af97">
+    <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1><a href="http://localhost:4000/">BioCoding 2019 - Toms River</a></h1>
+        
+        
+          <img src="/Doublehelix.png" alt="Logo" />
+        
+
+        <p></p>
+
+        
+        <p class="view"><a href="https://github.com/JasonJWilliamsNY/biocoding-2019-tomsriver">View the Project on GitHub <small>JasonJWilliamsNY/biocoding-2019-tomsriver</small></a></p>
+        
+
+        
+
+        
+      </header>
+      <section>
+
+      
+<h2 id="learning-objectives">Learning Objectives</h2>
+
+<ul>
+  <li>Know what the ‘shell’ is and how to use the shell to navigate the file system and execute commands</li>
+  <li>Understand principles and strategies for working at the command line.</li>
+  <li>Understand how the shell makes computing more reproducible and more powerful</li>
+</ul>
+
+<h2 id="lesson---what-is-the-shell">Lesson - What is the Shell?</h2>
+
+<p>The <em>shell</em> is a program that presents a command line interface which allows you to control your computer using commands entered with a keyboard instead of controlling graphical user interfaces (GUIs) with a mouse/keyboard combination.</p>
+
+<p>There are many reasons to learn about the shell.</p>
+
+<ul>
+  <li>For most bioinformatics tools, you have to use the shell. There is no graphical interface. If you want to work in genomics you’re going to need to use the shell.</li>
+  <li>The shell gives you <em>power</em>. The command line gives you the power to do your work more efficiently and more quickly.  When you need to do things tens to hundreds of times, knowing how to use the shell is transformative.</li>
+  <li>To use remote computers or cloud computing, you need to use the shell.</li>
+</ul>
+
+<p><img src="/lessons/shell_lesson/img/gvng.jpg" alt="Automation" /></p>
+
+<p>Unix is user-friendly, it’s just very selective about who its friends are.</p>
+
+<p>Today we’re going to go through how to access Unix/Linux and some of the basic shell commands.</p>
+
+<h2 id="starting-with-the-shell">Starting with the shell</h2>
+
+<p>We will spend most of our time learning about the basics of the shell by manipulating some experimental data.</p>
+
+<p>Now we’re going to download the data for the tutorial. For this you’ll need internet access, because you’re going to get it off the web.</p>
+
+<p>We’re going to be working with data on our remote server. After logging on, we’ll check out the example data.</p>
+
+<p>Let’s go into the sample data  directory</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cd </span>dc_sample data
+</code></pre></div></div>
+
+<p>‘cd’ stands for ‘change directory’</p>
+
+<p>Let’s see what is in here. Type</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">ls</span>
+</code></pre></div></div>
+
+<p>You will see</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    sra_metadata  untrimmed_fastq
+</code></pre></div></div>
+
+<p>ls stands for ‘list’ and it lists the contents of a directory.</p>
+
+<p>There are two items listed.  What are they? We can use a command line argument with <code class="highlighter-rouge">ls</code> to get more information.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">ls</span> <span class="nt">-F</span>
+sra_metadata/  untrimmed_fastq/
+</code></pre></div></div>
+
+<p>Anything with a “/” after it is a directory. Things with a “*” after them are programs.  If there are no decorations, it’s a file.</p>
+
+<p>You can also use the command</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">ls</span> <span class="nt">-l</span>
+drwxr-x--- 2 dcuser <span class="nb">sudo </span>4096 Jul 30 11:37 sra_metadata
+drwxr-xr-x 2 dcuser <span class="nb">sudo </span>4096 Jul 30 11:38 untrimmed_fastq
+</code></pre></div></div>
+
+<p>to see whether items in a directory are files or directories. <code class="highlighter-rouge">ls -l</code> gives a lot more
+information too.</p>
+
+<p>Let’s go into the untrimmed_fastq directory and see what is in there.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cd </span>untrimmed_fastq
+<span class="nv">$ </span><span class="nb">ls</span> <span class="nt">-F</span>
+SRR097977.fastq  SRR098026.fastq
+</code></pre></div></div>
+
+<p>There are two items in this directory with no trailing slash, so they are files.</p>
+
+<h2 id="arguments">Arguments</h2>
+
+<p>Most programs take additional arguments that control their exact behavior. For example, <code class="highlighter-rouge">-F</code> and <code class="highlighter-rouge">-l</code> are arguments to <code class="highlighter-rouge">ls</code>.  The <code class="highlighter-rouge">ls</code> program, like many programs, take a lot of arguments. Another useful one is ‘-a’, which show everything, including hidden files.  How do we know what the options are to particular commands?</p>
+
+<p>Most commonly used shell programs have a manual. You can access the
+manual using the <code class="highlighter-rouge">man</code> program. Try entering:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>man <span class="nb">ls</span>
+</code></pre></div></div>
+
+<p>This will open the manual page for <code class="highlighter-rouge">ls</code>. Use the space key to go forward and b to go backwards. When you are done reading, just hit <code class="highlighter-rouge">q</code> to quit.</p>
+
+<p>Programs that are run from the shell can get extremely complicated. To see an example, open up the manual page for the <code class="highlighter-rouge">find</code> program. No one can possibly learn all of these arguments, of course. So you will probably find yourself referring back to the manual page frequently.</p>
+
+<h2 id="the-unix-directory-file-structure-aka-where-am-i">The Unix directory file structure (a.k.a. where am I?)</h2>
+
+<p>As you’ve already just seen, you can move around in different directories or folders at the command line. Why would you want to do this, rather than just navigating around the normal way.</p>
+
+<p>When you’re working with bioinformatics programs, you’re working with your data and it’s key to be able to have that data in the right place and make sure the program has access to the data. Many of the problems people run in to with command line bioinformatics programs is not having the data in the place the program expects it to be.</p>
+
+<h2 id="moving-around-the-file-system">Moving around the file system</h2>
+
+<p>Let’s practice moving around a bit.</p>
+
+<p>We’re going to work in that <code class="highlighter-rouge">dc_sample_data</code> directory.</p>
+
+<p>First we did something like go to the folder of our username. Then we opened
+‘dc_sample_data’ then ‘data’</p>
+
+<p>Let’s draw out how that went.</p>
+
+<p>Now let’s draw some of the other files and folders we could have clicked on.</p>
+
+<p>This is called a hierarchical file system structure, like an upside down tree
+with root (/) at the base that looks like this.</p>
+
+<p><img src="/lessons/shell_lesson/img/Slide1.jpg" alt="Unix" /></p>
+
+<p>That (/) at the base is often also called the ‘top’ level.</p>
+
+<p>When you are working at your computer or log in to a remote computer,
+you are on one of the branches of that tree, your home directory (/home/dcuser)</p>
+
+<p>Now let’s go do that same navigation at the command line.</p>
+
+<p>Type</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cd</span>
+</code></pre></div></div>
+
+<p>This puts you in your home directory. This folder here.</p>
+
+<p>Now using <code class="highlighter-rouge">cd</code> and <code class="highlighter-rouge">ls</code>, go in to the ‘dc_sample_data’ directory and list its contents.</p>
+
+<p>Let’s also check to see where we are. Sometimes when we’re wandering around in the file system, it’s easy to lose track of where we are and get lost.</p>
+
+<p>If you want to know what directory you’re currently in, type</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">pwd</span>
+</code></pre></div></div>
+<p>This stands for ‘print working directory’. The directory you’re currently working in.</p>
+
+<p>What if we want to move back up and out of the ‘data’ directory? Can we just type <code class="highlighter-rouge">cd dc_sample_data</code>? Try it and see what happens.</p>
+
+<p>To go ‘back up a level’ we need to use <code class="highlighter-rouge">..</code></p>
+
+<p>Type</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cd</span> ..
+</code></pre></div></div>
+
+<p>Now do <code class="highlighter-rouge">ls</code> and <code class="highlighter-rouge">pwd</code>. See now that we went back up in to the ‘dc_sample_data’
+directory. <code class="highlighter-rouge">..</code> means go back up a level.</p>
+
+<hr />
+<p><strong>Exercise</strong></p>
+
+<p>Now we’re going to try a hunt.  Find a hidden directory in dc_sample_data list its contents and file the text file in there.  What is the name of the file?</p>
+
+<p>Hint: hidden files and folders in unix start with ‘.’, for example .my_hidden_directory</p>
+<hr />
+
+<h2 id="examining-the-contents-of-other-directories">Examining the contents of other directories</h2>
+
+<p>By default, the <code class="highlighter-rouge">ls</code> commands lists the contents of the working directory (i.e. the directory you are in). You can always find the directory you are in using the <code class="highlighter-rouge">pwd</code> command. However, you can also give <code class="highlighter-rouge">ls</code> the names of other directories to view. Navigate to the home directory if you are not already there.</p>
+
+<p>Type:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cd</span>
+</code></pre></div></div>
+<p>Then enter the command:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">ls </span>dc_sample_data
+</code></pre></div></div>
+
+<p>This will list the contents of the <code class="highlighter-rouge">dc_sample_data</code> directory without you having to navigate there.</p>
+
+<p>The <code class="highlighter-rouge">cd</code> command works in a similar way. Try entering:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cd </span>dc_sample_data/untrimmed_fastq
+</code></pre></div></div>
+
+<p>and you will jump directly to <code class="highlighter-rouge">untrimmed_fastq</code> without having to go through the intermediate directory.</p>
+
+<hr />
+<p><strong>Exercise</strong></p>
+
+<p>List the ‘SRR097977.fastq’ file from your home directory without changing directories
+<em>**</em></p>
+
+<h3 id="shortcut-tab-completion">Shortcut: Tab Completion</h3>
+
+<p>Navigate to the home directory. Typing out directory names can waste a lot of time. When you start typing out the name of a directory, then hit the tab key, the shell will try to fill in the rest of the directory name. For example, type <code class="highlighter-rouge">cd</code> to get back to your home directly, then enter:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cd </span>dc_&lt;tab&gt;
+</code></pre></div></div>
+
+<p>The shell will fill in the rest of the directory name for <code class="highlighter-rouge">dc_sample_data</code>. Now go to dc_sample_data/untrimmed_fastq</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">ls </span>SR&lt;tab&gt;&lt;tab&gt;
+</code></pre></div></div>
+
+<p>When you hit the first tab, nothing happens. The reason is that there are multiple directories in the home directory which start with <code class="highlighter-rouge">SR</code>. Thus, the shell does not know which one to fill in. When you hit tab again, the shell will list the possible choices.</p>
+
+<p>Tab completion can also fill in the names of programs. For example, enter <code class="highlighter-rouge">e&lt;tab&gt;&lt;tab&gt;</code>. You will see the name of every program that starts with an <code class="highlighter-rouge">e</code>. One of those is <code class="highlighter-rouge">echo</code>. If you enter <code class="highlighter-rouge">ec&lt;tab&gt;</code> you will see that tab completion works.</p>
+
+<h2 id="full-vs-relative-paths">Full vs. Relative Paths</h2>
+
+<p>The <code class="highlighter-rouge">cd</code> command takes an argument which is the directory name. Directories can be specified using either a <em>relative</em> path or a full <em>path</em>. The directories on the computer are arranged into a hierarchy. The full path tells you where a directory is in that hierarchy. Navigate to the home directory. Now, enter the <code class="highlighter-rouge">pwd</code> command and you should see:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">pwd</span>
+/home/dcuser
+</code></pre></div></div>
+
+<p>which is the full name of your home directory. This tells you that you are in a directory called <code class="highlighter-rouge">dcuser</code>, which sits inside a directory called <code class="highlighter-rouge">home</code> which sits inside the very top directory in the hierarchy. The very top of the hierarchy is a directory called <code class="highlighter-rouge">/</code> which is usually referred to as the <em>root directory</em>. So, to summarize: <code class="highlighter-rouge">dcuser</code> is a directory in <code class="highlighter-rouge">home</code> which is a directory in <code class="highlighter-rouge">/</code>.</p>
+
+<p>Now enter the following command:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cd</span> /home/dcuser/dc_sample_data/.hidden
+</code></pre></div></div>
+
+<p>This jumps to <code class="highlighter-rouge">.hidden</code>. Now go back to the home directory (cd). We saw
+earlier that the command:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cd </span>dc_sample_data/.hidden
+</code></pre></div></div>
+
+<p>had the same effect - it took us to the <code class="highlighter-rouge">hidden</code> directory. But, instead of specifying the full path (<code class="highlighter-rouge">/home/dcuser/dc_sample_data/data</code>), we specified a <em>relative path</em>. In other words, we specified the path relative to our current directory. A full path always starts with a <code class="highlighter-rouge">/</code>. A relative path does not.</p>
+
+<p>A relative path is like getting directions from someone on the street. They tell you to “go right at the Stop sign, and then turn left on Main Street”. That works great if you’re standing there together, but not so well if you’re trying to tell someone how to get there from another country. A full path is like GPS coordinates. It tells you exactly where something is no matter where you are right now.</p>
+
+<p>You can usually use either a full path or a relative path depending on what is most convenient. If we are in the home directory, it is more convenient to just enter the relative path since it involves less typing.</p>
+
+<p>Over time, it will become easier for you to keep a mental note of the structure of the directories that you are using and how to quickly navigate amongst them.</p>
+
+<hr />
+<p><strong>Exercise</strong>
+Now, list the contents of the /bin directory. Do you see anything familiar in there? 
+How can you tell these are programs rather than plain files?
+***</p>
+
+<h2 id="saving-time-with-shortcuts-wild-cards-and-tab-completion">Saving time with shortcuts, wild cards, and tab completion</h2>
+
+<h3 id="shortcuts">Shortcuts</h3>
+
+<p>There are some shortcuts which you should know about. Dealing with the
+home directory is very common. So, in the shell the tilde character,
+“~”, is a shortcut for your home directory. Navigate to the <code class="highlighter-rouge">dc_sample_data</code>
+directory:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cd</span>
+<span class="nv">$ </span><span class="nb">cd </span>dc_sample_data
+</code></pre></div></div>
+
+<p>Then enter the command:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">ls</span> ~
+</code></pre></div></div>
+
+<p>This prints the contents of your home directory, without you having to type the full path. The shortcut <code class="highlighter-rouge">..</code> always refers to the directory above your current directory. Thus:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">ls</span> ..
+</code></pre></div></div>
+
+<p>prints the contents of the <code class="highlighter-rouge">/home/dcuser/dc_sample_data</code>. You can chain these together, so:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">ls</span> ../../
+</code></pre></div></div>
+
+<p>prints the contents of <code class="highlighter-rouge">/home/dcuser</code> which is your home directory. Finally, the special directory <code class="highlighter-rouge">.</code> always refers to your current directory. So, <code class="highlighter-rouge">ls</code>, <code class="highlighter-rouge">ls .</code>, and <code class="highlighter-rouge">ls ././././.</code> all do the same thing, they print the contents of the current directory. This may seem like a useless shortcut right now, but we’ll see when it is needed in a little while.</p>
+
+<p>To summarize, while you are in the <code class="highlighter-rouge">shell</code> directory, the commands <code class="highlighter-rouge">ls ~</code>, <code class="highlighter-rouge">ls ~/.</code>, <code class="highlighter-rouge">ls ../../</code>, and <code class="highlighter-rouge">ls /home/dcuser</code> all do exactly the same thing. These shortcuts are not necessary, they are provided for your convenience.</p>
+
+<h3 id="our-data-set-fastq-files">Our data set: FASTQ files</h3>
+
+<p>We did an experiment and want to look at sequencing results. We want to be able to look at these files and do some things with them.</p>
+
+<h3 id="wild-cards">Wild cards</h3>
+
+<p>Navigate to the <code class="highlighter-rouge">~/dc_sample_data/data/untrimmed_fastq</code> directory. This
+directory contains our FASTQ files.</p>
+
+<p>The <code class="highlighter-rouge">*</code> character is a shortcut for “everything”. Thus, if you enter <code class="highlighter-rouge">ls *</code>, you will see all of the contents of a given directory. Now try this command:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">ls</span> <span class="k">*</span>fastq
+</code></pre></div></div>
+
+<p>This lists every file that ends with a <code class="highlighter-rouge">fastq</code>. This command:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">ls</span> /usr/bin/<span class="k">*</span>.sh
+</code></pre></div></div>
+
+<p>Lists every file in <code class="highlighter-rouge">/usr/bin</code> that ends in the characters <code class="highlighter-rouge">.sh</code>.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">ls</span> <span class="k">*</span>977.fastq
+</code></pre></div></div>
+
+<p>lists only the file that ends with ‘977.fastq’</p>
+
+<p>So how does this actually work? Well…when the shell (bash) sees a word that contains the <code class="highlighter-rouge">*</code> character, it automatically looks for filenames that match the given pattern.</p>
+
+<p>We can use the command ‘echo’ to see wilcards are they are intepreted by the shell.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">echo</span> <span class="k">*</span>.fastq
+SRR097977.fastq SRR098026.fastq
+</code></pre></div></div>
+
+<p>The ‘*’ is expanded to include any file that ends with ‘.fastq’</p>
+
+<h3 id="resources">Resources:</h3>
+
+<p>Shell cheat sheets:<br /></p>
+<ul>
+  <li><a href="http://fosswire.com/post/2007/08/unixlinux-command-cheat-sheet/">http://fosswire.com/post/2007/08/unixlinux-command-cheat-sheet/</a></li>
+  <li>
+    <p><a href="https://github.com/swcarpentry/boot-camps/blob/master/shell/shell_cheatsheet.md">https://github.com/swcarpentry/boot-camps/blob/master/shell/shell_cheatsheet.md</a></p>
+  </li>
+  <li>Explain shell - a web site where you can see what the different components of a shell command are doing.<a href="http://explainshell.com">http://explainshell.com</a></li>
+  <li>Learn more about cloud computing in bioinformatics <a href="http://www.commandlinefu.com">http://www.commandlinefu.com</a></li>
+</ul>
+
+
+
+      </section>
+      <footer>
+        
+        <p>This project is maintained by <a href="https://github.com/JasonJWilliamsNY">JasonJWilliamsNY</a></p>
+        
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="/assets/js/scale.fix.js"></script>
+    
+  </body>
+</html>

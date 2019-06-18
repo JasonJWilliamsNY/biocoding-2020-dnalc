@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Learning Objectives | [“BioCoding 2019 - Toms River”]</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Learning Objectives" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/lessons/cloud_lesson/" />
+<meta property="og:url" content="http://localhost:4000/lessons/cloud_lesson/" />
+<meta property="og:site_name" content="[“BioCoding 2019 - Toms River”]" />
+<script type="application/ld+json">
+{"@type":"WebPage","url":"http://localhost:4000/lessons/cloud_lesson/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/Doublehelix.png"}},"headline":"Learning Objectives","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=0960dc9bac4b74412bb1e249a0c28aeb2110af97">
+    <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1><a href="http://localhost:4000/">BioCoding 2019 - Toms River</a></h1>
+        
+        
+          <img src="/Doublehelix.png" alt="Logo" />
+        
+
+        <p></p>
+
+        
+        <p class="view"><a href="https://github.com/JasonJWilliamsNY/biocoding-2019-tomsriver">View the Project on GitHub <small>JasonJWilliamsNY/biocoding-2019-tomsriver</small></a></p>
+        
+
+        
+
+        
+      </header>
+      <section>
+
+      
+<h2 id="learning-objectives">Learning Objectives</h2>
+
+<ul>
+  <li>Understand benefits of working on a remote computer system</li>
+  <li>Be able to connect to a cloud instance
+    <ul>
+      <li>via SSH</li>
+      <li>via VNC</li>
+    </ul>
+  </li>
+  <li>Check the available resources and file system on your remote machine</li>
+  <li>Keep background processes working in the cloud with <code class="highlighter-rouge">tmux</code></li>
+</ul>
+
+<h2 id="lesson">Lesson</h2>
+
+<p>There are a number of reasons why accessing a remote machine is invaluable to any scientists working with large datasets. In the early history of computing, working on a remote machine was standard practice - computers were bulky and expensive. Today we work on laptops that are more powerful than the sum of the world’s computing capacity 20 years ago, but many analyses (especially in genomics) won’t work on these laptops and must be run on remote machines.</p>
+
+<p>You’ll know you need to start working on the cloud when…</p>
+
+<ul>
+  <li>Your computer does not have enough resources to run the desired analysis (memory, processors, disk space, network bandwidth).</li>
+  <li>Your computer is taking hours or days to get through an analysis.</li>
+  <li>You cannot install software on your computer (application does not have support for your operating system, conflicts with other existing applications, etc.)</li>
+</ul>
+
+<p>The cloud is a part of our everyday life (e.g. using Amazon, Google, Netflix, or an ATM involves remote computing). The topic is fascinating but this lesson says ‘5 minutes or less’ so let’s get connected.</p>
+
+<h2 id="exercises">Exercises</h2>
+
+<h3 id="a-connecting-to-a-remote-machine-via-ssh"><strong>A. Connecting to a remote machine via SSH</strong></h3>
+
+<p>This is the first and last place in these lessons where it will matter if you are using PC, Mac, or Linux. After we connect, we will all be on the same operating system/computing environment.</p>
+
+<blockquote>
+  <p>To save time, your instructor will have launched an remote computer (instance) for you prior to the workshop. If you are following these lessons on your own, or after the workshop see the lesson on <a href="https://jasonjwilliamsny.github.io/cloud-genomics/logging-onto-cloud.html">launching cloud instances on your own</a> for instructions on how to do this yourself.</p>
+</blockquote>
+
+<p><strong>User Credentials</strong>
+Credentials are case sensitive:</p>
+
+<ul>
+  <li>Username: dcuser</li>
+  <li>Password: data4Carp</li>
+</ul>
+
+<h4 id="connecting-using-pc"><strong>Connecting using PC</strong><br /></h4>
+<p><em>Prerequisites</em>: You must have an SSH client. There are several free options and we will use PuTTY [<a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html">Download Putty.exe</a>]</p>
+
+<ol>
+  <li>Open PuTTY; In the ‘Host Name (or IP address)’ section paste in the IP address provided by your instructor (or the ip address of an instance you have provisioned yourself). <em>Keep the default selection ‘SSH’ and Port (22)</em>. <br /></li>
+</ol>
+<p>&lt;img src="./img/putty_screenshot_1.png"width="500"&gt;</p>
+<ol>
+  <li>Click ‘Open’ and you will be presented with a security warning. Select ‘Yes’ to continue to connect. <br /></li>
+</ol>
+<p>&lt;img src="./img/putty_screenshot_2.png"width="500"&gt;</p>
+<ol>
+  <li>In the final step, you will be asked to provide a login and password. <strong>Note:</strong> When typing your password, it is common in Unix/Linux not see see any asterisks (e.g. <em>**</em>) or moving cursors. Just continue typing.<br /></li>
+</ol>
+<p>&lt;img src="./img/putty_screenshot_3.png"width="500"&gt;</p>
+<ol>
+  <li>You should now be connected!</li>
+</ol>
+
+<hr />
+
+<h4 id="connecting-using-maclinux"><strong>Connecting using Mac/Linux</strong><br /></h4>
+<p><em>Prerequisites</em>: Mac and Linux operating systems will already have terminals installed. Simply search for ‘Terminal’ and/or look for the terminal icon.<br /> 
+<img src="/lessons/cloud_lesson/img/terminal.png" alt="terminal icon" /></p>
+
+<ol>
+  <li>
+    <p>open the terminal and type the following command substituting ‘ip_address’ for the ip address your instructor will provide (or the ip address of an instance you have provisioned yourself). <em>Be sure to pay attention to capitalization and spaces</em></p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ ssh dcuser@ip_address
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>You will receive a security message that looks something like the message below. Type ‘yes’ to proceed.</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> The authenticity of host 'ec2-52-91-14-206.compute-1.amazonaws.com (52.91.14.206)' can't be established. ECDSA key fingerprint is SHA256:S2mMV8mCThjJHm0sUmK2iOE5DBqs8HiJr6pL3x/XxkI. Are you sure you want to continue connecting (yes/no)?
+</code></pre></div>    </div>
+  </li>
+  <li>In the final step, you will be asked to provide a login and password. <strong>Note:</strong> When typing your password, it is common in Unix/Linux not see see any asterisks (e.g. <em>**</em>) or moving cursors. Just continue typing.</li>
+  <li>You should now be connected!</li>
+</ol>
+
+<h3 id="b-connecting-to-a-remote-machine-via-vnc"><strong>B. Connecting to a remote machine via VNC</strong></h3>
+<p><a href="https://en.wikipedia.org/wiki/Virtual_Network_Computing">VNC</a> - Virtual Network Computing is a technology that allows you to connect to and share the desktop of a remote computer. To use VNC the computer you are connecting to must be running a VNC server. To view the desktop, you will need to download a VNC viewing client such as RealVNCs <a href="https://www.realvnc.com/download/viewer/">VNC Viewer</a>.</p>
+
+<ol>
+  <li>To start the VNC server on your remote computer enter the command:
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ vncstart
+</code></pre></div>    </div>
+  </li>
+  <li>Open <a href="https://www.realvnc.com/download/viewer/">VNC Viewer</a>; enter the same IP address you used to connect to the remote computer via SSH <strong>+ ‘:1’</strong> (e.g. ec2-11-11-111-11.compute-1.amazonaws.com:1)</li>
+  <li>Confirm you wish to connect to the instance (you may need to say yes to confirm the first time you connect to a new instance, and/or if the connection is unencrypted). Enter your username (dcuser) and password.</li>
+  <li>You should now be viewing the desktop of your instance.</li>
+</ol>
+<p>&lt;img src="./img/dc_desktop.png"width="500"&gt;</p>
+
+<h3 id="c-verifying-your-connection-and-environment"><strong>C. Verifying your connection and environment</strong></h3>
+
+<p>When you connect, it is typical to receive a welcome screen. The Data Carpentry Amazon instances display this message upon connecting:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Welcome to Ubuntu 14.04.3 LTS <span class="o">(</span>GNU/Linux 3.13.0-48-generic x86_64<span class="o">)</span>
+
+ <span class="k">*</span> Documentation:  https://help.ubuntu.com/
+
+  System information as of Sun Jan 24 21:38:35 UTC 2016
+
+  System load:  0.0                Processes:           151
+  Usage of /:   48.4% of 98.30GB   Users logged <span class="k">in</span>:     0
+  Memory usage: 6%                 IP address <span class="k">for </span>eth0: 172.31.62.209
+  Swap usage:   0%
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+12 packages can be updated.
+10 updates are security updates.
+
+
+Last login: Sun Jan 24 21:38:36 2016 from
+</code></pre></div></div>
+
+<p>You should also have a blinking cursor awaiting your command</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dcuser@ip-172-31-62-209 ~ <span class="err">$</span>
+</code></pre></div></div>
+
+<h2 id="bonus-material">Bonus material</h2>
+
+<p>Now that we have connected we can move on to the Unix shell lesson. There are however a few commands that tell you a little about the machine you have connected to:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">whoami</code> - shows your username on computer you have connected to:</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dcuser@ip-172-31-62-209 ~ <span class="nv">$ </span>whoami
+dcuser
+</code></pre></div></div>
+<ul>
+  <li><code class="highlighter-rouge">df -h</code> - shows space on hard drive*</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dcuser@ip-172-31-62-209 ~ <span class="nv">$ </span>df <span class="nt">-h</span>
+Filesystem      Size  Used Avail Use% Mounted on
+udev            2.0G   12K  2.0G   1% /dev
+tmpfs           396M  792K  395M   1% /run
+/dev/xvda1       99G   48G   47G  51% /
+none            4.0K     0  4.0K   0% /sys/fs/cgroup
+none            5.0M     0  5.0M   0% /run/lock
+none            2.0G  144K  2.0G   1% /run/shm
+none            100M   36K  100M   1% /run/user
+</code></pre></div></div>
+<p>* Under the column ‘Mounted on’ row that has ‘/’ as the value shows the value for the main disk.</p>
+
+<ul>
+  <li><code class="highlighter-rouge">cat /proc/cpuinfo</code> - shows detail information on how many processors (CPUs) the machine has</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dcuser@ip-172-31-62-209 ~ <span class="nv">$ </span><span class="nb">cat</span> /proc/cpuinfo
+processor  : 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 62
+model name	: Intel<span class="o">(</span>R<span class="o">)</span> Xeon<span class="o">(</span>R<span class="o">)</span> CPU E5-2670 v2 @ 2.50GHz
+stepping	: 4
+microcode	: 0x415
+cpu MHz		: 2494.060
+cache size	: 25600 KB
+physical id	: 0
+siblings	: 2
+core id		: 0
+cpu cores	: 2
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx rdtscp lm constant_tsc rep_good nopl xtopology eagerfpu pni pclmulqdq ssse3 cx16 pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm xsaveopt fsgsbase smep erms
+bogomips	: 4988.12
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 62
+model name	: Intel<span class="o">(</span>R<span class="o">)</span> Xeon<span class="o">(</span>R<span class="o">)</span> CPU E5-2670 v2 @ 2.50GHz
+stepping	: 4
+microcode	: 0x415
+cpu MHz		: 2494.060
+cache size	: 25600 KB
+physical id	: 0
+siblings	: 2
+core id		: 1
+cpu cores	: 2
+apicid		: 2
+initial apicid	: 2
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx rdtscp lm constant_tsc rep_good nopl xtopology eagerfpu pni pclmulqdq ssse3 cx16 pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm xsaveopt fsgsbase smep erms
+bogomips	: 4988.12
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+</code></pre></div></div>
+<ul>
+  <li><code class="highlighter-rouge">tree -L 1</code> - shows a tree view of the file system 1 level below your current location.</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dcuser@ip-172-31-62-209 ~ <span class="nv">$ </span>tree <span class="nt">-L</span> 1
+
+├── dc_sample_data
+├── Desktop
+├── Downloads
+├── FastQC
+├── openrefine-2.6-beta.1
+├── R
+└── Trimmomatic-0.32
+
+7 directories, 0 files
+</code></pre></div></div>
+
+<h2 id="staying-connected-to-the-cloud">Staying Connected to the Cloud</h2>
+
+<p>Depending on how you connect to the cloud, you may have processes and jobs that are running, and will need to continue running for sometime. If you have collected to your cloud desktop via VNC, jobs you start will continue to run. If you are connecting via SSH, if you end the SSH connection (e.g. you exit your SSH session, you loose your connection to the internet, you close your laptop, etc.), jobs that are still running when you disconnect. There are a few ways to keep cloud processes running in the background. Many times when we refer to a background process we are talking about what is <a href="http://www.cyberciti.biz/faq/linux-command-line-run-in-background/">described at this tutorial</a> - running a command and returning to shell prompt. Here we describe a program that will allow us to run our entire shell and keep that process running even if we disconnect: <code class="highlighter-rouge">tmux</code>.</p>
+
+<h3 id="starting-and-attaching-to-tmux-sessions">Starting and attaching to <code class="highlighter-rouge">tmux</code> sessions</h3>
+
+<p><strong>Starting a new session</strong></p>
+
+<p>A ‘session’ can be thought of as a window for <code class="highlighter-rouge">tmux</code>, you might open an terminal to do one thing on the a computer and then open a new terminal to work on another task at the command line. You can start a session and give it a descriptive name:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nv">$ </span>tmux new <span class="nt">-s</span> session_name
+</code></pre></div></div>
+<p>This creates a session with the name ‘session_name’</p>
+
+<p>As you work, this session will stay active until you close this session. Even if you disconnect from your machine, the jobs you start in this session will run till completion.</p>
+
+<p><strong>Seeing active sessions</strong></p>
+
+<p>If you disconnect from your session, or from your ssh into a machine, you will need to reconnect to an existing <code class="highlighter-rouge">tmux</code> session. You can see a list of existing sessions:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>tmux list-sessions
+</code></pre></div></div>
+
+<p><strong>Connecting to a session</strong></p>
+
+<p>To connect to an existing session:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>tmux attach <span class="nt">-t</span> session_name
+<span class="c"># -t option = 'target'</span>
+</code></pre></div></div>
+
+<p><strong>Switch sessions</strong>
+You can switch between sessions:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>tmux switch <span class="nt">-t</span> session_name
+</code></pre></div></div>
+
+<p><strong>Kill a session</strong>
+You can end sessions:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>tmux kill-session <span class="nt">-t</span> session_name
+</code></pre></div></div>
+
+<h3 id="resources">Resources:</h3>
+
+<p>Cloud computing offerings:</p>
+
+<ul>
+  <li>Amazon EC2: <a href="http://aws.amazon.com/ec2/">http://aws.amazon.com/ec2/</a></li>
+  <li>Microsoft Azure: <a href="https://azure.microsoft.com/en-us/">https://azure.microsoft.com/en-us/</a></li>
+  <li>Google Cloud Platform: <a href="https://cloud.google.com/">https://cloud.google.com/</a></li>
+  <li>CyVerse (iPlant Collaborative) Atmosphere: <a href="http://www.cyverse.org/atmosphere">http://www.cyverse.org/atmosphere</a></li>
+</ul>
+
+<p>Learn more about cloud computing in bioinformatics<br />
+Fusaro VA, Patil P, Gafni E, Wall DP, Tonellato PJ (2011) <strong>Biomedical Cloud Computing With Amazon Web Services</strong>. PLoS Comput Biol 7(8): e1002147. doi: 10.1371/journal.pcbi.1002147</p>
+
+
+
+      </section>
+      <footer>
+        
+        <p>This project is maintained by <a href="https://github.com/JasonJWilliamsNY">JasonJWilliamsNY</a></p>
+        
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="/assets/js/scale.fix.js"></script>
+    
+  </body>
+</html>
