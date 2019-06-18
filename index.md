@@ -60,6 +60,27 @@ You will be informed of your usernames and passwords during the class.
 - CodeCademy [link](https://www.codecademy.com/)
 - Hour of code (also in languages other than english) [link](https://code.org/learn)
 
+**Software installations**
+
+Be sure you have permission to install software
+
+- Try Ubuntu [link](https://tutorials.ubuntu.com/tutorial/try-ubuntu-before-you-install#0)
+- Python [link](https://www.python.org/downloads/)
+- Jupyter [link](https://jupyter.org/)
+- Wing IDE [link](https://wingware.com/)
+- Atom text editor [link](https://atom.io/)
+
+**Bioinformatics**
+
+- Learn bioinformatics in 100 hours [link](https://www.biostarhandbook.com/edu/course/1/)
+- Rosalind bioinformatics [link](http://rosalind.info/about/)
+- Bioinformatics coursera [link](https://www.coursera.org/learn/bioinformatics)
+- Bioinformatics careers [link](https://www.iscb.org/bioinformatics-resources-for-high-schools/careers-in-bioinformatics)
+
+**Help**
+
+- General software help [link](https://stackoverflow.com/)
+- Bioinformatics-specific software help [link](https://www.biostars.org/)
 
 
 ## Conduct expectations
