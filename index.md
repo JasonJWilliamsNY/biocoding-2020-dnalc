@@ -53,6 +53,12 @@ You will be informed of your usernames and passwords during the class.
 </tbody>
 </table>
 
+## Setup
+
+To configure your account for first use, see the [setup page](./setup.md). 
+
+
+
 ## Learning more after the class
 
 **General Coding**
