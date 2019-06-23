@@ -55,39 +55,7 @@ You will be informed of your usernames and passwords during the class.
 
 ## Setup
 
-To configure your account for first use, see the [setup page](./setup.md). 
-
-
-
-## Learning more after the class
-
-**General Coding**
-
-- CodeCademy: [link](https://www.codecademy.com/)
-- Hour of code (also in languages other than English): [link](https://code.org/learn)
-
-**Software installations**
-
-Be sure you have permission to install software
-
-- Try Ubuntu: [link](https://tutorials.ubuntu.com/tutorial/try-ubuntu-before-you-install#0)
-- Python: [link](https://www.python.org/downloads/)
-- Jupyter: [link](https://jupyter.org/)
-- Wing IDE: [link](https://wingware.com/)
-- Atom text editor: [link](https://atom.io/)
-
-**Bioinformatics**
-
-- Learn bioinformatics in 100 hours: [link](https://www.biostarhandbook.com/edu/course/1/)
-- Rosalind bioinformatics: [link](http://rosalind.info/about/)
-- Bioinformatics coursera: [link](https://www.coursera.org/learn/bioinformatics)
-- Bioinformatics careers: [link](https://www.iscb.org/bioinformatics-resources-for-high-schools/careers-in-bioinformatics)
-
-**Help**
-
-- General software help: [link](https://stackoverflow.com/)
-- Bioinformatics-specific software help: [link](https://www.biostars.org/)
-
+To configure your account for first use, see the [setup page](./setup.md).
 
 ## Conduct expectations
 
@@ -97,7 +65,7 @@ Failure to observe these rules may result in warnings and/or dismissal from
 the class.
 
 1. Everyone can learn something from this class and has a right to do so in
-   a safe and welcoming environemnt.
+   a safe and welcoming environment.
 
 2. Everyone is to be treated with respect - there should be no name calling,
    insults, bullying, and/or profanity. If your jokes or other behavior
@@ -109,5 +77,34 @@ the class.
    are uncalled for.
 
 4. During instructional time, the use of cell phones or internet browsing
-   unrelated to the course should be limited. Students are not permited to
+   unrelated to the course should be limited. Students are not permitted to
    visit inappropriate sites and must make responsible use of the internet.
+
+   ## Learning more after the class
+
+   **General Coding**
+
+   - CodeCademy: [link](https://www.codecademy.com/)
+   - Hour of code (also in languages other than English): [link](https://code.org/learn)
+
+   **Software installations**
+
+   Be sure you have permission to install software
+
+   - Try Ubuntu: [link](https://tutorials.ubuntu.com/tutorial/try-ubuntu-before-you-install#0)
+   - Python: [link](https://www.python.org/downloads/)
+   - Jupyter: [link](https://jupyter.org/)
+   - Wing IDE: [link](https://wingware.com/)
+   - Atom text editor: [link](https://atom.io/)
+
+   **Bioinformatics**
+
+   - Learn bioinformatics in 100 hours: [link](https://www.biostarhandbook.com/edu/course/1/)
+   - Rosalind bioinformatics: [link](http://rosalind.info/about/)
+   - Bioinformatics coursera: [link](https://www.coursera.org/learn/bioinformatics)
+   - Bioinformatics careers: [link](https://www.iscb.org/bioinformatics-resources-for-high-schools/careers-in-bioinformatics)
+
+   **Help**
+
+   - General software help: [link](https://stackoverflow.com/)
+   - Bioinformatics-specific software help: [link](https://www.biostars.org/)
