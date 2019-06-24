@@ -9,8 +9,8 @@ projects that utilize DNA sequence data generated from a hands-on lab experiment
 
 ## Login info
 
-- Etherpad Address: [http://128.196.142.63:8000](http://128.196.142.63:8000)
-- Jupyter Hub Address: [http://128.196.142.63:9001/p/tomsriver](http://128.196.142.63:9001/p/tomsriver)
+- Etherpad Address: [http://128.196.142.63:9001/p/tomsriver](http://128.196.142.63:9001/p/tomsriver)
+- Jupyter Hub Address: [http://128.196.142.63:8000](http://128.196.142.63:8000)
 
 You will be informed of your usernames and passwords during the class.
 
