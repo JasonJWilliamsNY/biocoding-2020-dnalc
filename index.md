@@ -9,8 +9,8 @@ projects that utilize DNA sequence data generated from a hands-on lab experiment
 
 ## Login info
 
-- Etherpad Address: [http://128.196.142.63:9001/p/tomsriver](http://128.196.142.63:9001/p/tomsriver)
-- Jupyter Hub Address: [http://128.196.142.63:8000](http://128.196.142.63:8000)
+- Etherpad Address: [TBA](TBA)
+- Jupyter Hub Address: [TBA](TBA)
 
 You will be informed of your usernames and passwords during the class.
 
@@ -29,8 +29,8 @@ You will be informed of your usernames and passwords during the class.
 <tr>
 <td style="text-align:left">Monday</td>
 <td style="text-align:left"><ul><li>Introduction to the course</li><li>Introduction to Jupyter </li><li>Introduction to linux </li><li>Introduction to NCBI </li><li> What is a gene? </li><li> Browsing the human genome </li><li> Browsing OMIM for genes</li><li>Introduction to Python</li></ul></td>
-<td style="text-align:left"><ul><li>Intro Python I </li><li>Intro to Unix </li></ul></td>
-<td style="text-align:left"><ul><li><a href="https://www.ncbi.nlm.nih.gov/">NCBI</a></li><li><a href="https://www.ncbi.nlm.nih.gov/projects/genome/guide/human/index.shtml">Human genome</a></li><li><a href="https://www.genome.gov/">genome.gov</a></li><li><a href="http://www.dnai.org/">DNAi</a></li><li><a href="http://23andme.com/">23andMe</a></li><li><a href="https://www.omim.org/">OMIM</a></li></ul></td>
+<td style="text-align:left"><ul><li>Intro Python I </li><li>Intro to Unix </li><li> DNA Barcoding lab</li></ul></td>
+<td style="text-align:left"><ul><li><a href="https://www.ncbi.nlm.nih.gov/">NCBI</a></li><li><a href="https://www.ncbi.nlm.nih.gov/projects/genome/guide/human/index.shtml">Human genome</a></li><li><a href="https://www.genome.gov/">genome.gov</a></li><li><a href="http://www.dnai.org/">DNAi</a></li><li><a href="http://23andme.com/">23andMe</a></li><li><a href="https://www.omim.org/">OMIM</a></li><li> <a href="https://www.dnabarcoding101.org/">DNA Barcoding 101</a></li><li><a href="https://www.dnabarcoding101.org/lab/protocol-2.html#standard">DNA Barcoding lab - Rapid Isolation</a></li></ul></td>
 </tr>
 <tr>
 <td style="text-align:left">Tuesday</td>
@@ -41,13 +41,19 @@ You will be informed of your usernames and passwords during the class.
 <tr>
 <td style="text-align:left">Wednesday</td>
 <td style="text-align:left"><ul><li>Dictionaries and functions</li><li>Objects and classes </li><li>Biomath and stats</li></ul></td>
-<td style="text-align:left"><ul><li>Python lab IV</li><li>Python Classes</li><li>Math review</li><li>Stats I,II,III</li></ul></td>
+<td style="text-align:left"><ul><li>Python lab IV</li><li>Stats I,II,III</li></ul></td>
 <td style="text-align:left"></td>
 </tr>
 <tr>
 <td style="text-align:left">Thursday</td>
-<td style="text-align:left"><ul><li>Working with files</li><li>Biopython</li></ul></td>
-<td style="text-align:left"><ul><li>Files</li><li>Biopython</li></ul></td>
+<td style="text-align:left"><ul><li>Python Classes</li><li>Working with files</li><li>Biopython</li></ul></td>
+<td style="text-align:left"><ul><li>Python dataframes and plotting</li><li>Biopython</li></ul></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">Friday</td>
+<td style="text-align:left"><ul><li>Biopython</li><li>Analysis of sequencing results</li><li>Biopython </li><li> Post-camp learning resources</li></ul></td>
+<td style="text-align:left"><ul><li>Biopython</li></ul></td>
 <td style="text-align:left"></td>
 </tr>
 </tbody>
