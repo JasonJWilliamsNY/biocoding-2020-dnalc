@@ -88,6 +88,10 @@ the class.
 
    ## Learning more after the class
 
+   **Notebooks used in this course**
+   - Biocoding 2019 Notebooks [link](https://github.com/JasonJWilliamsNY/biocoding-2019-notebooks)
+   - - You can download these materials: [link](https://github.com/JasonJWilliamsNY/biocoding-2019-notebooks/archive/master.zip)
+
    **General Coding**
 
    - CodeCademy: [link](https://www.codecademy.com/)
