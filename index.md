@@ -9,8 +9,8 @@ projects that utilize DNA sequence data generated from a hands-on lab experiment
 
 ## Login info
 
-- Etherpad Address: [TBA](TBA)
-- Jupyter Hub Address: [TBA](TBA)
+- Etherpad Address: [http://128.196.142.91:9001/p/biocoding-07-15-19](http://128.196.142.91:9001/p/biocoding-07-15-19)
+- Jupyter Hub Address: [http://128.196.142.91:8000](http://128.196.142.91:8000)
 
 You will be informed of your usernames and passwords during the class.
 
