@@ -15,13 +15,13 @@ in this class. Here are some setup instructions for download these notebooks.
    can double-click to highlight all):
 
       ```
-      git clone https://github.com/JasonJWilliamsNY/biocoding-2019-notebooks.git
+      git clone https://github.com/JasonJWilliamsNY/biocoding-2020-notebooks.git
       ```
 
     You should get an output that looks something like:
 
     ```
-    Cloning into 'biocoding-2019-notebooks'...
+    Cloning into 'biocoding-2020-notebooks'...
     remote: Enumerating objects: 88, done.
     remote: Counting objects: 100% (88/88), done.
     remote: Compressing objects: 100% (83/83), done.

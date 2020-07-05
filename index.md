@@ -9,8 +9,8 @@ projects that utilize DNA sequence data generated from a hands-on lab experiment
 
 ## Login info
 
-- Etherpad Address: [http://128.196.142.91:9001/p/biocoding-07-15-19](http://128.196.142.91:9001/p/biocoding-07-15-19)
-- Jupyter Hub Address: [http://128.196.142.91:8000](http://128.196.142.91:8000)
+- Etherpad Address:
+- Jupyter Hub Address:
 
 You will be informed of your usernames and passwords during the class.
 
@@ -89,8 +89,8 @@ the class.
    ## Learning more after the class
 
    **Notebooks used in this course**
-   - Biocoding 2019 Notebooks [link](https://github.com/JasonJWilliamsNY/biocoding-2019-notebooks)
-   - - You can download these materials: [link](https://github.com/JasonJWilliamsNY/biocoding-2019-notebooks/archive/master.zip)
+   - Biocoding 2020 Notebooks [link](https://github.com/JasonJWilliamsNY/biocoding-2020-notebooks)
+   - - You can download these materials: [link](https://github.com/JasonJWilliamsNY/biocoding-2020-notebooks/archive/master.zip)
 
    **General Coding**
 

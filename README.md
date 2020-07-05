@@ -1,3 +1,3 @@
-# Biocoding 2019 Summer Camp
+# Biocoding 2020 Summer Camp
 
-Course materials for the 2019 BioCoding Camp at Tom's River
+Course materials for the 2020 BioCoding Camp at the DNALC
