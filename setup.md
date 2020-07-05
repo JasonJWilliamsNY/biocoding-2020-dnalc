@@ -29,4 +29,4 @@ in this class. Here are some setup instructions for download these notebooks.
     Unpacking objects: 100% (88/88), done.
     ```
 
-You are now ready to continue on with the course!
+You are now ready to continue on with the course! 
